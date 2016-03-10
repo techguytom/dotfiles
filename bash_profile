@@ -1,11 +1,15 @@
+export PATH=~/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=~/bin:$PATH
 #export PATH=/usr/local/Cellar/php54/5.4.27/bin:$PATH
-export SENCHA_CMD_3_0_0="/Users/tjenkins/bin/Sencha/Cmd/3.0.2.288"
-export PATH=/Users/tjenkins/bin/Sencha/Cmd/3.0.2.288:$PATH
+#export SENCHA_CMD_3_0_0="/Users/tjenkins/bin/Sencha/Cmd/3.0.2.288"
+#export PATH=/Users/tjenkins/bin/Sencha/Cmd/3.0.2.288:$PATH
 export PATH=~/.composer/vendor/bin:$PATH
-
+export PATH=~/bin/mfcli:$PATH
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+export PATH="$(brew --prefix php55)/bin:$PATH"
+export N_PREFIX=$HOME/.node
+export PATH=$N_PREFIX/bin:$PATH
 #enables color in the terminal bash shell export
 export CLICOLOR=1
 
@@ -31,5 +35,4 @@ alias cdsites="cd ~/Sites/sites"
 alias vagrant80="sudo ipfw add 100 fwd 127.0.0.1,8080 tcp from any to me 80"
 alias vagrant443="sudo ipfw add 101 fwd 127.0.0.1,8443 tcp from any to me 443"
 alias wpdebug="tail -f wp-content/debug.log"
-source /usr/local/share/chruby/chruby.sh
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"

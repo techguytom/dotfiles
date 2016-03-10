@@ -54,6 +54,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeQuitOnOpen = 1
 " Ctrl+t to toggle Tags
 map <C-t> :TagbarToggle<CR> 
+
 " Sync nerdtree with open buffer from buffexplorer
 " autocmd BufWinEnter * NERDTreeFind
 " php document usage mapped to Ctrl+p
@@ -63,12 +64,20 @@ au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
 let g:pdv_cfg_Author = 'Tom Jenkins <tom@techguytom.com>'
 "Check php syntax on save
 let g:syntastic_mode_map = { 'mode':'active','active_filetypes':['php'],'passive_filetypes':[] }
+
 " TagList
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_WinWidth = 50
 let Tlist_Auto_Update = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
+
+"Ctags
+set tags=./tags,tags;
+
+" YouCompleteMe
+let g:ycm_collect_identifiers_from_tags_files=1
+
 " OmniComplete
 set ofu=syntaxcomplete#Complete
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -76,12 +85,10 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-:set tags+=~/Dropbox/sites/wp-trunk/tags
-" SuperTab
-let g:SuperTabDefaoultCompletionType = '<C-X><C-O>'
-let g:SuperTabContextTextOmniPrecedence = '&omnifunc'
+
 " gundo
 nnoremap <C-u> :GundoToggle<CR>
+
 " Debugger
 let g:dbgPavimPort = 9000
 " let g:dbgPavimBreakAtEntry = 1

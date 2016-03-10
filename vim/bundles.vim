@@ -14,13 +14,14 @@ Bundle 'gmarik/vundle'
 Bundle 'shawncplus/phpcomplete.vim'
 "Bundle 'Shougo/neocomplcache'
 "Bundle 'garbas/vim-snipmate'
-Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 "Bundle 'honza/snipmate-snippets'
 "Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
 "Bundle 'MarcWeber/vim-addon-mw-utils'
 "Bundle 'tomtom/tlib_vim'
 Bundle 'sukima/xmledit'
+"Bundle 'Valloric/YouCompleteMe'
 
 "-----------------
 " Fast navigation
@@ -70,7 +71,7 @@ Bundle 'kakkyz81/evervim'
 " web backend
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'tpope/vim-rails'
-"Bundle 'beyondwords/vim-jinja2'
+Bundle 'beyondwords/vim-twig'
 "Bundle 'digitaltoad/vim-jade'
 Bundle 'tsaleh/vim-align'
 
